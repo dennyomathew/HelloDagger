@@ -10,3 +10,6 @@ I decided to redo it to learn Dagger as well as to structure the project in the 
 ![Project structure](https://raw.githubusercontent.com/dennyomathew/HelloDagger/master/blob/master/img/Hello.png)
 
 As you can see that I have just replace "Lobby" Module with "HelloWorld" Module and reorganized the View, Model and View Model as separate folders within the Hello World Module.
+
+
+![Screenshot](https://raw.githubusercontent.com/dennyomathew/HelloDagger/master/blob/master/img/view.png)
