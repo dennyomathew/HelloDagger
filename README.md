@@ -1,5 +1,5 @@
 # HelloDagger
-Dagger MVVM based Architecture Android Project with LiveData and RxJava
+Dagger MVVM Architecture based Android Project with LiveData and RxJava
 
 
 This is based on James Shvarts's Implementing MVVM using LiveData, RxJava, Dagger Android. 
