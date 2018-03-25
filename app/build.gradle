@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+project.ext {
+    supportLibraryVersion = "26.1.0"
+    daggerVersion = "2.13"
+    rxJavaVersion = "2.1.2"
+    rxAndroidVersion = "2.0.2"
+    lifecycleVersion = "1.1.1"
+    butterknifeVersion = "8.8.1"
+}
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.dennymathew.hellodagger"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$project.supportLibraryVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    // Dagger core
+    annotationProcessor "com.google.dagger:dagger-compiler:$project.daggerVersion"
+    compile "com.google.dagger:dagger:$project.daggerVersion"
+    // Dagger Android
+    annotationProcessor "com.google.dagger:dagger-android-processor:$project.daggerVersion"
+    compile "com.google.dagger:dagger-android-support:$project.daggerVersion"
+
+    // ReactiveX
+    compile "io.reactivex.rxjava2:rxjava:$project.rxJavaVersion"
+    compile "io.reactivex.rxjava2:rxandroid:$project.rxAndroidVersion"
+
+    // Lifecycle
+    implementation "android.arch.lifecycle:runtime:$project.lifecycleVersion"
+    implementation "android.arch.lifecycle:extensions:$project.lifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$project.lifecycleVersion"
+
+    implementation "com.jakewharton:butterknife:$project.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$project.butterknifeVersion"
+
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloDagger</string>
+    <string name="greeting_error">Failed to  get greeting</string>
+    <string name="load_greeting">Load Greeting</string>
+</resources>
